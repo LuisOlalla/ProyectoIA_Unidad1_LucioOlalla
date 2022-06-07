@@ -25,7 +25,12 @@ def LimpiaVidrios():
     print("Ventana 1 = V1\nVentana 2 = V2\nVentana 3 = V3\nVentana 4 = V4") #Todas las locaciones del robot, en este caso son las locaciones del edificion como ventanas.
     print("Ventana 5 = V5\nVentana 6 = V6\nVentana 7 = V7")#Todas las locaciones del robot, en este caso son las locaciones del edificion como ventanas.
     
-      
+    #Ingreso de locaciones del robot LimpiaVidrios
+    locacion_ventana=input("Ingrese el escenario o locacion de la ventana :")
+    #Realizamos los if de cada locación, vamos a empezar con la Ventana 1 = V1
+    #Si la locacion es V1, entonces el robot LimpiaVidrios esta en la Ventana 1
+    if locacion_ventana == 'V1':
+        
     
     
     

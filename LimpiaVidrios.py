@@ -13,7 +13,7 @@ def LimpiaVidrios():
     """  
     #Colocamos el estado objetivo de nuestro agente.
     objetivo = {'V1':'0','V2':'0','V3':'0','V4':'0','V5':'0','V6':'0','V7':'0'}
-    esfuerzo = 0 #Esto es el esfuerzo que realiza el robot al cambiar de estado.
+    costo = 0 #Esto es el esfuerzo que realiza el robot al cambiar de estado.
     
     #Estados del robot LimpiaVidrios
     print("ESTADOS DEL ROBOT LIMPIA VIDRIOS: ")
@@ -30,6 +30,138 @@ def LimpiaVidrios():
     #Realizamos los if de cada locación, vamos a empezar con la Ventana 1 = V1
     #Si la locacion es V1, entonces el robot LimpiaVidrios esta en la Ventana 1
     if locacion_ventana == 'V1':
+        """
+        If locacion_ventana nos permite ingresar el estado para la locacion de la ventana 1,
+        y despues para las demas ventanas.
+        
+        """        
+        #Mandamos un print que nos dice que el robot LimpiaVidrios esta en la locacion V1
+        print("El robot Limpiavidrios esta en la Ventana 1 : ")
+        #Ingresamos el estado de la locacion de la Ventana
+        estadoV1=input("Ingrese el estado de la locacion : " +locacion_ventana)
+        #Ingreso del estado para la locacion de la ventana 2
+        estadoV2=input("Ingrese el estado de la locacion V2 : ")
+        #Ingreso del estado para la locacion de la ventana 3
+        estadoV3=input("Ingrese el estado de la locacion V3 : ")
+       #Ingreso del estado para la locacion de la ventana 4
+        estadoV4=input("Ingrese el estado de la locacion V4 : ")
+       #Ingreso del estado para la locacion de la ventana 5
+        estadoV5=input("Ingrese el estado de la locacion V5 : ")
+        #Ingreso del estado para la locacion de la ventana 6
+        estadoV6=input("Ingrese el estado de la locacion V6 : ")
+       #Ingreso del estado para la locacion de la ventana 7
+        estadoV7=input("Ingrese el estado de la locacion V7 : ")
+        #En caso de que sea 0 la ventana esta limpia
+        if estadoV1 =='1':
+            """
+            if para evaluar cada uno de los estados en la ventana 1
+            
+            """
+            #Dado que la ventana 1 es igual a  1 esta sucia            
+            print("En la locación: "+locacion_ventana+ ", la ventana esta sucia ")
+            #Asignamos el estado objetivo a 0 para que pase la ventana a estar limpia.
+            objetivo["V1"]='0'
+            #Simulación de que el robot esta limpiando la ventana 1
+            print("LIMPIANDO VENTANA 1 ....")
+            #Verificacion de que la ventana esta limpia
+            print("En la locacion : "+locacion_ventana+ ", el robot ha limpiado la ventana ")
+            costo +=1 #El costo aumenta ya que realizo un esfuerzo al cambiar de estado.
+            #Verificamos el valor del costo.
+            print("Valor del costo = "+str(costo))
+            #Realizamos el if para la ventana 2
+            if estadoV2 =='1':
+                """
+                If para evaluar los estados de la ventana 2, en este caso la ventana esta sucia por lo cual se debe cambiar de estado.
+                """
+                #En caso de que sea  1 la ventana esta sucia
+                print("En la locación: "+estadoV2+ ", la ventana esta sucia ")
+                #Simulación de que el robot esta limpiando la ventana 
+                print("LIMPIANDO VENTANA 2  ....")
+                costo+=1 #El costo aumenta ya que realizo un esfuerzo al cambiar de estado.
+                print("Valor del costo = "+str(costo))
+                #Afirmamos que la ventana esta limpia
+                print("La ventana 2 se ha limpiado ")
+                
+                #Realizamos el if para la ventana 3
+                if estadoV3 =='1':
+                    """
+                    If para evaluar los estados de la ventana 3, en este caso la ventana esta sucia por lo cual se debe cambiar de estado.
+                    """
+                    #En caso de que sea  1 la ventana esta sucia
+                    print("En la locación: "+estadoV3+ ", la ventana esta sucia ")  
+                    #Simulación de que el robot esta limpiando la ventana  
+                    print("LIMPIANDO VENTANA 3  ....") 
+                    costo+=1 #El costo aumenta ya que realizo un esfuerzo al cambiar de estado.
+                    print("Valor del costo = "+str(costo)) 
+                     #Afirmamos que la ventana esta limpia   
+                    print("La ventana 3 se ha limpiado ")
+                    if estadoV4 =='1':
+                        #En caso de que sea  1 la ventana esta sucia
+                        print("En la locación: "+estadoV4+ ", la ventana esta sucia ")  
+                        #Simulación de que el robot esta limpiando la ventana  
+                        print("LIMPIANDO VENTANA 4  ....") 
+                        costo+=1 #El costo aumenta ya que realizo un esfuerzo al cambiar de estado.
+                        print("Valor del costo = "+str(costo)) 
+                        #Afirmamos que la ventana esta limpia   
+                        print("La ventana 4 se ha limpiado ")
+                        if estadoV5 == '1':
+                                #En caso de que sea  1 la ventana esta sucia
+                            print("En la locación: "+estadoV5+ ", la ventana esta sucia ")  
+                            #Simulación de que el robot esta limpiando la ventana  
+                            print("LIMPIANDO VENTANA 5  ....") 
+                            costo+=1 #El costo aumenta ya que realizo un esfuerzo al cambiar de estado.
+                            print("Valor del costo = "+str(costo)) 
+                            #Afirmamos que la ventana esta limpia   
+                            print("La ventana 5 se ha limpiado ")
+                            if estadoV6 == '1':
+                                        #En caso de que sea  1 la ventana esta sucia
+                                print("En la locación: "+estadoV6+ ", la ventana esta sucia ")  
+                                #Simulación de que el robot esta limpiando la ventana  
+                                print("LIMPIANDO VENTANA 6  ....") 
+                                costo+=1 #El costo aumenta ya que realizo un esfuerzo al cambiar de estado.
+                                print("Valor del costo = "+str(costo)) 
+                                #Afirmamos que la ventana esta limpia   
+                                print("La ventana 6 se ha limpiado ")
+                                if estadoV7 == '1':
+                                        #En caso de que sea  1 la ventana esta sucia
+                                    print("En la locación: "+estadoV7+ ", la ventana esta sucia ")  
+                                    #Simulación de que el robot esta limpiando la ventana  
+                                    print("LIMPIANDO VENTANA 7  ....") 
+                                    costo+=1 #El costo aumenta ya que realizo un esfuerzo al cambiar de estado.
+                                    print("Valor del costo = "+str(costo)) 
+                                    #Afirmamos que la ventana esta limpia   
+                                    print("La ventana 7 se ha limpiado ")
+    else:
+        print("Todas las ventanas estan limpias")
+        print("Valor del costo actual =" +str(costo))
+        print("Todos las locaciones de las ventanadas estan limpias")
+                                    
+                                
+                            
+                        
+                     
+                        
+                    
+                     
+                    
+                      
+                
+                
+                 
+                
+                 
+                
+                
+                
+                         
+               
+            
+                     
+                   
+                
+                
+                
+                                
         
     
     

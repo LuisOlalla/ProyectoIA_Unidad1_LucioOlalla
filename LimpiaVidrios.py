@@ -167,9 +167,18 @@ def LimpiaVidrios():
         print("Todas las ventanas estan limpias")
         print("Valor del costo actual =" + str(costo))
         print("Todos las locaciones de las ventanadas estan limpias")
-
+        '''
+        En este control condicional se determina el estado de la ventana 1
+        En caso de ser 0 se aplican las diferentes condiciones
+        '''
         if estadoV1 == '0':
-            print("La ventana 1 ya se encuentra limpia")
+            """
+            if para evaluar cada uno de los estados en la ventana 1
+
+            """
+            #La ventana ya se encuentra se encuentra limpia
+            print("La ventana ya se encuentra limpia")
+            print("El costo actual es: " +str(costo))
             if estadoV2 == '1':
                 """
                 If para evaluar los estados de la ventana 2, en este caso la ventana esta sucia por lo cual se debe cambiar de estado.
@@ -197,6 +206,57 @@ def LimpiaVidrios():
                     print("Valor del costo = "+str(costo))
                     # Afirmamos que la ventana esta limpia
                     print("La ventana 3 se ha limpiado ")
+                    if estadoV4 == '1':
+                        # En caso de que sea  1 la ventana esta sucia
+                        print("En la locación: "+estadoV4 +
+                              ", la ventana esta sucia ")
+                        # Simulación de que el robot esta limpiando la ventana
+                        print("LIMPIANDO VENTANA 4  ....")
+                        # El costo aumenta ya que realizo un esfuerzo al cambiar de estado.
+                        costo += 1
+                        print("Valor del costo = "+str(costo))
+                        # Afirmamos que la ventana esta limpia
+                        print("La ventana 4 se ha limpiado ")
+                        if estadoV5 == '1':
+                            # En caso de que sea  1 la ventana esta sucia
+                            print("En la locación: "+estadoV5 +
+                                  ", la ventana esta sucia ")
+                            # Simulación de que el robot esta limpiando la ventana
+                            print("LIMPIANDO VENTANA 5  ....")
+                            # El costo aumenta ya que realizo un esfuerzo al cambiar de estado.
+                            costo += 1
+                            print("Valor del costo = "+str(costo))
+                            # Afirmamos que la ventana esta limpia
+                            print("La ventana 5 se ha limpiado ")
+                            if estadoV6 == '1':
+                                # En caso de que sea  1 la ventana esta sucia
+                                print("En la locación: "+estadoV6 +
+                                      ", la ventana esta sucia ")
+                                # Simulación de que el robot esta limpiando la ventana
+                                print("LIMPIANDO VENTANA 6  ....")
+                                # El costo aumenta ya que realizo un esfuerzo al cambiar de estado.
+                                costo += 1
+                                print("Valor del costo = "+str(costo))
+                                # Afirmamos que la ventana esta limpia
+                                print("La ventana 6 se ha limpiado ")
+                                if estadoV7 == '1':
+                                    # En caso de que sea  1 la ventana esta sucia
+                                    print("En la locación: "+estadoV7 +
+                                          ", la ventana esta sucia ")
+                                    # Simulación de que el robot esta limpiando la ventana
+                                    print("LIMPIANDO VENTANA 7  ....")
+                                    # El costo aumenta ya que realizo un esfuerzo al cambiar de estado.
+                                    costo += 1
+                                    print("Valor del costo = "+str(costo))
+                                    # Afirmamos que la ventana esta limpia
+                                    print("La ventana 7 se ha limpiado ")
+            else:
+                print("Ninguna acción a realizar")
+                print("El costo actual es: " +str(costo))
+    
+        
+
+
 
             
 

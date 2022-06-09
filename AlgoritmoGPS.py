@@ -69,3 +69,18 @@ class Grafo():
                 self.m_lista_adyacencia[nodo2].add(nodo1)
         except Exception as e:
             print(e)
+    def mostrar_lista_adyacencia(self):
+        '''
+        Generar el método para obtener los nodos adyacentes a un nodo
+        Parámetros:
+            Nada
+        Retorna:
+            Nada
+        '''
+        try:
+            for clave in self.m_lista_adyacencia:
+                print("Nodo ", clave, ":", self.m_lista_adyacencia[clave])
+        except Exception as e:
+            print(e)
+    
+    

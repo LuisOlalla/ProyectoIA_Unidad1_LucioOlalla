@@ -24,17 +24,24 @@ class Grafo():
                     Determina si el grafo es dirigido o no
             Retorna:
                 Nada
+        Generar un control de excepciones
+         try:
+            except:
+                print("Error")
         '''
-        #Asignamos valores al número de nodos mediante el parámetro que se recibio
-        self.m_numero_nodos = numero_de_nodos
-        #Se genera el rango de nodos en base a m_numero_nodos
-        self.m_nodos = range(self.m_numero_nodos)
-        #Determinar si el grafo es dirigido o no dirigido
-        self.m_dirigido = dirigido
-        #Se genera un diccionario con los nodos que se van a visitar
-        self.m_locaciones = diccionario
-        #Se genera una lista de los nodos que se van a visitar
-        self.m_lista_adyacencia = {nodo: set() for nodo in self.m_nodos}
+        try:
+            #Asignamos valores al número de nodos mediante el parámetro que se recibio
+            self.m_numero_nodos = numero_de_nodos
+            #Se genera el rango de nodos en base a m_numero_nodos
+            self.m_nodos = range(self.m_numero_nodos)
+            #Determinar si el grafo es dirigido o no dirigido
+            self.m_dirigido = dirigido
+            #Se genera un diccionario con los nodos que se van a visitar
+            self.m_locaciones = diccionario
+            #Se genera una lista de los nodos que se van a visitar
+            self.m_lista_adyacencia = {nodo: set() for nodo in self.m_nodos}
+        except Exception as e:
+            print(e)
     
     def añadir_locaciones(self,nodo1,nodo2,peso=1):
         '''
@@ -48,9 +55,17 @@ class Grafo():
                 Peso que se le asigna al nodo
         Retorna:
             Nada
+        
+        Generar un control de excepciones
+        try:
+            except:
+                print("Error")
         '''
-        #Se añade el nodo 1 al nodo 2
-        self.m_lista_adyacencia[nodo1].add(nodo2)
-        #Se añade el nodo 2 al nodo 1
-        if not self.m_dirigido:
-            self.m_lista_adyacencia[nodo2].add(nodo1)
+        try:
+            #Se añade el nodo 1 al nodo 2
+            self.m_lista_adyacencia[nodo1].add(nodo2)
+            #Se añade el nodo 2 al nodo 1
+            if not self.m_dirigido:
+                self.m_lista_adyacencia[nodo2].add(nodo1)
+        except Exception as e:
+            print(e)

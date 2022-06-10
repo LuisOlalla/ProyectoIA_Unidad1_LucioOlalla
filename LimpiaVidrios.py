@@ -742,6 +742,228 @@ def LimpiaVidrios():
         estadoV7 = input("Ingrese el estado de la locacion V7 : ")
         
         #if para evaluar la ventana 4
+        if estadoV4 =='1':
+            """
+                Evaluamos el estado de la ventana 2 y pasamos de estado objetivo.
+            """            
+            print("La ventana 4 esta sucia")
+            #Limpiamos la ventana
+            print("LIMPIANDO VENTANA   ....")
+            #Afirmamos que esta limoia la ventana
+            print("La ventana esta limpia ")
+            #aumentamos el costo por cambio de estado
+            costo+=1
+            #esta sucia y cambiamos de estado
+            objetivo["V4"]='0'
+            #imprimimos el valor del costo
+            print("Valor del costo = "+str(costo))
+            # Afirmamos que la ventana esta limpia
+            print("La ventana 4 se ha limpiado ")
+            
+            #if para evaluar la ventana 1
+            if estadoV1=='1':
+                print("La ventana 1 esta sucia ") #Decimos que la ventana esta sucia
+                #Cambiamos estado objetivo.
+                objetivo["V1"]='0'
+                print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                print("La ventana ya esta limpia ") #La ventana esta limpia
+                 #cambio de costo
+                costo+=1
+                #El costo aumenta
+                print("Valor del costo = "+str(costo))
+                #Decimos que la ventana esta limpia
+                print("La ventana 1 se ha limpiado")
+                
+                #if para evaluar la ventana 2
+                if estadoV2 =='1':
+                    print("La ventana 2 esta sucia ") #Decimos que la ventana esta sucia
+                    #Cambiamos estado objetivo.
+                    objetivo["V2"]='0'
+                    print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                    print("La ventana ya esta limpia ") #La ventana esta limpia
+                    #cambio de costo
+                    costo+=1
+                    #El costo aumenta
+                    print("Valor del costo = "+str(costo))
+                    #Decimos que la ventana esta limpia
+                    print("La ventana 2 se ha limpiado")
+                    
+                    #if para evaluar la ventnana 3
+                    if estadoV3=='1':
+                        print("La ventana 3 esta sucia ") #Decimos que la ventana esta sucia
+                        print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                        print("La ventana ya esta limpia ") #La ventana esta limpia
+                        #cambio de costo
+                        costo+=1
+                        #Cambiamos estado objetivo.
+                        objetivo["V3"]='0'
+                        #El costo aumenta
+                        print("Valor del costo = "+str(costo))
+                        #Decimos que la ventana esta limpia
+                        print("La ventana 3 se ha limpiado")
+                        
+                        #if para la ventana 5
+                        if estadoV5=='1':
+                            print("La ventana 5 esta sucia ") #Decimos que la ventana esta sucia
+                            print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                            print("La ventana ya esta limpia ") #La ventana esta limpia
+                            #cambio de costo
+                            costo+=1
+                            #Cambiamos estado objetivo.
+                            objetivo["V5"]='0'
+                            #El costo aumenta
+                            print("Valor del costo = "+str(costo))
+                            #Decimos que la ventana esta limpia
+                            print("La ventana 5 se ha limpiado")
+                            
+                            #if para la ventana 6
+                            if estadoV6 =='1':
+                                print("La ventana 6 esta sucia ") #Decimos que la ventana esta sucia
+                                print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                                print("La ventana ya esta limpia ") #La ventana esta limpia
+                                #cambio de costo
+                                costo+=1
+                                #Cambiamos estado objetivo.
+                                objetivo["V6"]='0'
+                                #El costo aumenta
+                                print("Valor del costo = "+str(costo))
+                                #Decimos que la ventana esta limpia
+                                print("La ventana 6 se ha limpiado")
+                                
+                                #if para la ventana 7
+                                if estadoV7 =='1':
+                                    print("La ventana 7 esta sucia ") #Decimos que la ventana esta sucia
+                                    print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                                    print("La ventana ya esta limpia ") #La ventana esta limpia
+                                    #cambio de costo
+                                    costo+=1
+                                    #Cambiamos estado objetivo.
+                                    objetivo["V7"]='0'
+                                    #El costo aumenta
+                                    print("Valor del costo = "+str(costo))
+                                    #Decimos que la ventana esta limpia
+                                    print("La ventana 7 se ha limpiado")
+        if estadoV4 =='0':
+            #Las ventanas ya estan limpias
+            print("La ventana 4 ya esta limpia")
+            #if para la ventana 1
+            if estadoV1 =='1':
+                print("La ventana 1 esta sucia ") #Decimos que la ventana esta sucia
+                #Cambiamos estado objetivo.
+                objetivo["V1"]='0'
+                print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                print("La ventana ya esta limpia ") #La ventana esta limpia
+                #cambio de costo
+                costo+=1
+                 #El costo aumenta
+                print("Valor del costo = "+str(costo))
+                #Decimos que la ventana esta limpia
+                print("La ventana 1 se ha limpiado")
+                
+                #if para evaluar la ventana 2
+                if estadoV2 =='1':
+                    
+                    print("La ventana 2 esta sucia ") #Decimos que la ventana esta sucia
+                    #Cambiamos estado objetivo.
+                    objetivo["V2"]='0'
+                    print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                    print("La ventana ya esta limpia ") #La ventana esta limpia
+                    #cambio de costo
+                    costo+=1
+                    #El costo aumenta
+                    print("Valor del costo = "+str(costo))
+                    #Decimos que la ventana esta limpia
+                    print("La ventana 2 se ha limpiado")
+                    
+                    #if para evaluar la ventana 3
+                    if estadoV3 =='1':
+                        print("La ventana 3 esta sucia ") #Decimos que la ventana esta sucia
+                        #Cambiamos estado objetivo.
+                        print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                        print("La ventana ya esta limpia ") #La ventana esta limpia
+                        #cambio de costo
+                        costo+=1
+                        #estado objetivo
+                        objetivo["V3"]='0'
+                        #El costo aumenta
+                        print("Valor del costo = "+str(costo))
+                        #Decimos que la ventana esta limpia
+                        print("La ventana 3 se ha limpiado")
+                        
+                        #if para evaluar la ventana 5
+                        if estadoV5=='1':
+                            print("La ventana 5 esta sucia ") #Decimos que la ventana esta sucia
+                            #Cambiamos estado objetivo.
+                            print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                            print("La ventana ya esta limpia ") #La ventana esta limpia
+                            #cambio de costo
+                            costo+=1
+                            #estado objetivo
+                            objetivo["V5"]='0'
+                            #El costo aumenta
+                            print("Valor del costo = "+str(costo))
+                            #Decimos que la ventana esta limpia
+                            print("La ventana 5 se ha limpiado")
+                            
+                            #if para evaluar la ventana 6
+                            if estadoV6 =='1':
+                                print("La ventana 6 esta sucia ") #Decimos que la ventana esta sucia
+                                #Cambiamos estado objetivo.
+                                print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                                print("La ventana ya esta limpia ") #La ventana esta limpia
+                                #cambio de costo
+                                costo+=1
+                                #estado objetivo
+                                objetivo["V6"]='0'
+                                #El costo aumenta
+                                print("Valor del costo = "+str(costo))
+                                #Decimos que la ventana esta limpia
+                                print("La ventana 6 se ha limpiado")
+                                
+                                #if para evaluar la ventana 7
+                                if estadoV7 =='1':
+                                    print("La ventana 7 esta sucia ") #Decimos que la ventana esta sucia
+                                    #Cambiamos estado objetivo.
+                                    print("LIMPIANDO VENTANA   ....") #Limpiamos la ventana
+                                    print("La ventana ya esta limpia ") #La ventana esta limpia
+                                    #cambio de costo
+                                    costo+=1
+                                    #estado objetivo
+                                    objetivo["V7"]='0'
+                                    #El costo aumenta
+                                    print("Valor del costo = "+str(costo))
+                                    #Decimos que la ventana esta limpia
+                                    print("La ventana 7 se ha limpiado")
+                                    
+            else:
+                #Decimos que todo ya esta realizado y no hay nada que hacer
+                print("Todo esta realizado")
+                #Valor actual del costo
+                print("El costo actual es: " +str(costo))
+                #Decimos que todas las ventanas ya estan limpias
+                print("Todas las ventanas ya han sido limpiadas")
+   
+    # Programacion para la ventana 5
+                                    
+                                    
+                            
+                         
+                            
+                    
+                    
+                
+            
+         
+                                        
+                                    
+                                
+                            
+                        
+                     
+                     
+                    
+                
+            
         
         
         

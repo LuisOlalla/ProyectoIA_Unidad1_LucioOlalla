@@ -16,7 +16,7 @@ def LimpiaVidrios():
     # Colocamos el estado objetivo de nuestro agente.
     objetivo = {'Ventana 1': '0', 'Ventana 2': '0', 'Ventana 3': '0',
                 'Ventana 4': '0', 'Ventana 5': '0', 'Ventana 6': '0', 'Ventana 7': '0'}
-    locaciones ={'Ventana 1': '0', 'Ventana 2': '0', 'Ventana 3': '0',
+    locaciones = {'Ventana 1': '0', 'Ventana 2': '0', 'Ventana 3': '0',
                 'Ventana 4': '0', 'Ventana 5': '0', 'Ventana 6': '0', 'Ventana 7': '0'}
     costo = 0  # Esto es el esfuerzo que realiza el robot al cambiar de estado.
 

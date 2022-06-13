@@ -46,10 +46,20 @@ def LimpiaVidrios():
         # Ingresamos el estado de la locacion de la Ventana
         estadoV1 = input(
             "Ingrese el estado de la locacion : " + locacion_ventana)
+        while estadoV1<'0' or estadoV1>'1':
+            print("Error, solo ponga 0 o 1")
+            estadoV1 = input(
+            "Ingrese el estado de la locacion : " + locacion_ventana)
         # Ingreso del estado para la locacion de la ventana 2
         estadoV2 = input("Ingrese el estado de la locacion V2 : ")
+        while estadoV2<'0' or estadoV2>'1':
+            print("Error, solo ponga 0 o 1")
+            estadoV2 = input("Ingrese el estado de la locacion V2 : ")
         # Ingreso del estado para la locacion de la ventana 3
         estadoV3 = input("Ingrese el estado de la locacion V3 : ")
+        while estadoV3<'0' or estadoV3>'1':
+            print("Error, solo ponga 0 o 1")
+            estadoV3 = input("Ingrese el estado de la locacion V2 : ")
        # Ingreso del estado para la locacion de la ventana 4
         estadoV4 = input("Ingrese el estado de la locacion V4 : ")
        # Ingreso del estado para la locacion de la ventana 5

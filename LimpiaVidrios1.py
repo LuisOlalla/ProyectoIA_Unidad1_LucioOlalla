@@ -57,6 +57,6 @@ def LimpiaVidrios():
             print(e)
             
     print(str(locaciones))
-    print(str(objetivo))
+    
 
 LimpiaVidrios()

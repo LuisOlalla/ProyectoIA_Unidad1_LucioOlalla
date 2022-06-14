@@ -1,9 +1,9 @@
 import unittest
-from LimpiaVidrios1 import LimpiaVidrios
+from LimpiaVidrios1 import LimpiaVidriosP
 
 class TestLimpiaVidrios(unittest.TestCase):
-    def test_limpia_vidrios(self):
-        self.assertEqual(LimpiaVidrios(),True)
+    def test_LimpiaVidriosP(self):
+        self.assertFalse(LimpiaVidriosP(), LimpiaVidriosP)
 
 if __name__ == '__main__':
     unittest.main()

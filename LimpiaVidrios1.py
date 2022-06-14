@@ -34,7 +34,7 @@ def LimpiaVidrios():
     costo = 0  # Esto es el esfuerzo que realiza el robot al cambiar de estado.
     
     #For que permite recorrer mediante una llave el diccionario del estado objetivo.
-    for llave in objetivo.keys():
+    for llave in locaciones.keys():
         # Imprime la locacion en la que se encuentra mediante la llave creada.
         print('Locación: ', llave)
         # Try que contiene todo el flujo del agente.
@@ -59,7 +59,7 @@ def LimpiaVidrios():
                         #El costo aumenta debido al cambio de estado.
                         costo+=1
                         #Evalua las locaciones que contiene la llave para colocarlos al final del diccionario.
-                        locaciones[llave] = estado_localidad   
+                        objetivo[llave] = estado_localidad   
                         #Imprime el costo actual en base a los estados que se realizan.
                         print('El  Costo actual es: ',str(costo)) 
                         #break para cerrar el bucle elif
@@ -78,7 +78,7 @@ def LimpiaVidrios():
             #imprime la excepcion  que definimos anteriormente
             print(e)        
     #Print para immprimir las locaciones del agente en base al resultado final
-    print(str(locaciones))
+    print(str(objetivo))
     
 #Funcion limpiavidrios
 LimpiaVidrios()

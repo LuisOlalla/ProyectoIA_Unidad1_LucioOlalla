@@ -89,6 +89,17 @@ class Grafo():
         El método DFS permitirá imprimir el recorrdio generado mediant un nodo inicial y un nodo objetivo o final.
         A su vez, generará los nodos que fueron visitados y el recorrido que se tomo para llegar hacia ese
         nodo objetivo.
+        Parámetros:
+            inicio : int
+                Nodo inicial
+            objetivo : int
+                Nodo objetivo
+            ruta : list
+                Lista que contiene los nodos que fueron visitados
+            visitado : set
+                Lista que contiene los nodos que fueron visitados
+        Retorna:
+            Nada
         """
         try:
             # Se agrega el nodo inicial a la lista de visitados
@@ -124,79 +135,103 @@ class Grafo():
             return None
         except Exception as e:
             print(e)
-    
+def ubicaciones(grafo):
+    '''
+    Generar el método para obtener las ubicaciones de un grafo
+    Parámetros:
+        grafo : Grafo
+            Objeto que contiene las ubicaciones
+    Retorna:
+        Nada
+    '''
+    #Se añaden los nodos al grafo
+    #Se añade el nodo 0 al nodo 1
+    grafo.añadir_locaciones(0,1,3)
+    #Se añade el nodo 0 al nodo 12
+    grafo.añadir_locaciones(0,12,2)
+    #Se añade el nodo 0 al nodo 3
+    grafo.añadir_locaciones(0,3,1)
+    #Se añade el nodo 0 al nodo 7
+    grafo.añadir_locaciones(0,7,2)
+    #Se añade el nodo 0 al nodo 10
+    grafo.añadir_locaciones(0,10)
+    #Se añade el nodo 0 al nodo 6
+    grafo.añadir_locaciones(0,6,1)
+    #Se añade el nodo 0 al nodo 14
+    grafo.añadir_locaciones(0,14,1)
+    #Se añade el nodo 1 al nodo 15
+    grafo.añadir_locaciones(1,15,1)
+    #Se añade el nodo 2 al nodo 7
+    grafo.añadir_locaciones(2,7,1)
+    #Se añade el nodo 2 al nodo 16
+    grafo.añadir_locaciones(2,16,2)
+    #Se añade el nodo 3 al nodo 4
+    grafo.añadir_locaciones(3,4,1)
+    #Se añade el nodo 4 al nodo 17
+    grafo.añadir_locaciones(4,17,1)
+    #Se añade el nodo 4 al nodo 19
+    grafo.añadir_locaciones(4, 19, 16)
+    #Se añade el nodo 5 al nodo 6
+    grafo.añadir_locaciones(5,6,2)
+    #Se añade el nodo 6 al nodo 5
+    grafo.añadir_locaciones(6,5,1)
+    #Se añade el nodo 6 al nodo 10
+    grafo.añadir_locaciones(6,10,5)
+    #Se añade el nodo 7 al nodo 2
+    grafo.añadir_locaciones(7,2,6)
+    #Se añade el nodo 8 al nodo 0
+    grafo.añadir_locaciones(8,0,2)
+    #Se añade el nodo 8 al nodo 2
+    grafo.añadir_locaciones(8,2,1)
+    #Se añade el nodo 9 al nodo 10
+    grafo.añadir_locaciones(9,10,2)
+    #Se añade el nodo 9 al nodo 8
+    grafo.añadir_locaciones(9,8,1)
+    #Se añade el nodo 9 al nodo 2
+    grafo.añadir_locaciones(9, 2, 10)
+    #Se añade el nodo 10 al nodo 5
+    grafo.añadir_locaciones(10,5,2)
+    #Se añade el nodo 11 al nodo 18
+    grafo.añadir_locaciones(11,18,2)
+    #Se añade el nodo 12 al nodo 11
+    grafo.añadir_locaciones(12,11,2)
+    #Se añade el nodo 13 al nodo 3
+    grafo.añadir_locaciones(13,3,2)
+    #Se añade el nodo 13 al nodo 14
+    grafo.añadir_locaciones(13,14,2)
+    #Se añade el nodo 14 al nodo 7
+    grafo.añadir_locaciones(14,7,1)
+    #Se añade el nodo 14 al nodo 3
+    grafo.añadir_locaciones(14, 3, 10)
+    #Se añade el nodo 15 al nodo 0
+    grafo.añadir_locaciones(15,0,2)
+    #Se añade el nodo 16 al nodo 19
+    grafo.añadir_locaciones(16,19,2)
+    #Se añade el nodo 16 al nodo 20
+    grafo.añadir_locaciones(16,20,2)
+    #Se añade el nodo 17 al nodo 4
+    grafo.añadir_locaciones(17, 4, 1)
+    #Se añade el nodo 18 al nodo 6
+    grafo.añadir_locaciones(18, 6, 5)
+    #Se añade el nodo 18 al nodo 11
+    grafo.añadir_locaciones(18,11,5)
+    #Se añade el nodo 19 al nodo 5
+    grafo.añadir_locaciones(19, 5, 2)
+    #Se añade el nodo 19 al nodo 20
+    grafo.añadir_locaciones(19, 20, 2)
+    #Se añade el nodo 20 al nodo 19
+    grafo.añadir_locaciones(20,19,2)
+    #Se añade el nodo 20 al nodo 16
+    grafo.añadir_locaciones(20,16,2)
+
 
 if __name__ == "__main__":
     #Se crea un diccionario con los nodos que se van a visitar
     diccionario = {0:"Ecuador",1:"Panamá",2:"Brasil",3:"EEUU",4:"Canadá",5:"Argentina",6:"Chile",7:"Perú",8:"Uruguay",9:"Paraguay",10:"Bolivia",11:"Venezuela",12:"Colombia",13:"México",14:"Costa Rica",15:"Francia",16:"Sudáfrica",17:"Rusia",18:"España",19:"China",20:"Japón"}
     #Se crea un grafo dirigido 
     grafo = Grafo(21,diccionario)
-    #Se añaden los nodos al grafo
-    grafo.añadir_locaciones(0,1,3)
-    grafo.añadir_locaciones(0,12,2)
-    grafo.añadir_locaciones(0,3,1)
-    grafo.añadir_locaciones(0,7,2)
-    grafo.añadir_locaciones(0,10)
-    grafo.añadir_locaciones(0,6,1)
-    grafo.añadir_locaciones(0,14,1)
-
-    grafo.añadir_locaciones(1,15,1)
-
-    grafo.añadir_locaciones(2,7,1)
-    grafo.añadir_locaciones(2,16,2)
-
-    grafo.añadir_locaciones(3,4,1)
-
-
-    grafo.añadir_locaciones(4,17,1)
-    grafo.añadir_locaciones(4, 19, 16)
-
-    grafo.añadir_locaciones(5,6,2)
-
-    grafo.añadir_locaciones(6,5,1)
-    grafo.añadir_locaciones(6,10,5)
-
-    grafo.añadir_locaciones(7,2,6)
-
-    grafo.añadir_locaciones(8,0,2)
-    grafo.añadir_locaciones(8,2,1)
-
-    grafo.añadir_locaciones(9,10,2)
-    grafo.añadir_locaciones(9,8,1)
-    grafo.añadir_locaciones(9, 2, 10)
-
-    grafo.añadir_locaciones(10,5,2)
-
-
-    grafo.añadir_locaciones(11,18,2)
-
-    grafo.añadir_locaciones(12,11,2)
-
-    grafo.añadir_locaciones(13,3,2)
-    grafo.añadir_locaciones(13,14,2)
-
-    grafo.añadir_locaciones(14,7,1)
-    grafo.añadir_locaciones(14, 3, 10)
-
-    grafo.añadir_locaciones(15,0,2)
-
-    grafo.añadir_locaciones(16,19,2)
-    grafo.añadir_locaciones(16,20,2)
-
-    grafo.añadir_locaciones(17, 4, 1)
-
-    grafo.añadir_locaciones(18, 6, 5)
-    grafo.añadir_locaciones(18,11,5)
-
-    grafo.añadir_locaciones(19, 5, 2)
-    grafo.añadir_locaciones(19, 20, 2)
-
-    grafo.añadir_locaciones(20,19,2)
-    grafo.añadir_locaciones(20,16,2)
-
-
-
-
+    #Se añaden las ubicaciones en base a los nodos
+    ubicaciones(grafo)
     #Se muestra la lista de adyacencia
     grafo.mostrar_lista_adyacencia()
 

@@ -4,7 +4,7 @@
 # Asignatura: Inteligencia Artificial
 # Programar el agente
 # Definimos funcíon del Robot Limpia Vidrios
-
+#Importamos el modulo time para poder usar el delay
 import time
 def LimpiaVidrios():
     """

@@ -11,7 +11,7 @@ class TestUtils(unittest.TestCase):
         g = Grafo(21,diccionario)
         ubicaciones(g)
 
-        self.assertFalse(g.dfs(0,16),['Ecuador', 'EEUU', 'Canadá', 'China', 'Japón', 'Sudáfrica'])
+        self.assertEqual(g.dfs(0,16, ruta=[],visitado=set()),['Ecuador', 'EEUU', 'Canadá', 'China', 'Japón', 'Sudáfrica'])
         
 
 if __name__ == '__main__':

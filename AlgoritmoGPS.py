@@ -101,14 +101,12 @@ class Grafo():
         Retorna:
             Nada
         """
-        try:
-            # Se agrega el nodo inicial a la lista de visitados
-            visitado.add(inicio)
-            # Se agrega el nodo inicial a la lista de ruta
-            ruta.append(diccionario[inicio])
-        except Exception as e:
-            print(e)
-        
+    
+        # Se agrega el nodo inicial a la lista de visitados
+        visitado.add(inicio)
+        # Se agrega el nodo inicial a la lista de ruta
+        ruta.append(self.m_locaciones[inicio])
+      
         try:
             # Si el nodo inicial es el objetivo se imprime el recorrido
             if inicio == objetivo:

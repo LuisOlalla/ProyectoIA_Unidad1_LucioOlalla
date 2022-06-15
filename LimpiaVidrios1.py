@@ -4,6 +4,8 @@
 # Asignatura: Inteligencia Artificial
 # Programar el agente
 # Definimos funcíon del Robot Limpia Vidrios
+
+import time
 def LimpiaVidrios():
     """
     Funcion del robot que va a contener todo el control del flujo del programa
@@ -54,6 +56,7 @@ def LimpiaVidrios():
                     elif(estado_localidad == '1'):
                         # 1 significa sucio por lo tanto se limpia la ventana.
                         print('LIMPIANDO VENTANA...')
+                        time.sleep(2)
                         #Print para detallar que la ventana se limpio correctamente.
                         print('La ventana se ha limpiado correctamente') 
                         #El costo aumenta debido al cambio de estado.

@@ -56,6 +56,7 @@ def LimpiaVidrios():
                     elif(estado_localidad == '1'):
                         # 1 significa sucio por lo tanto se limpia la ventana.
                         print('LIMPIANDO VENTANA...')
+                        #Genera un delay al momento de la ejecucion del programa.
                         time.sleep(2)
                         #Print para detallar que la ventana se limpio correctamente.
                         print('La ventana se ha limpiado correctamente') 
